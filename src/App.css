@@ -1,0 +1,55 @@
+
+:root {
+  --bg-color: whitesmoke;
+  --bg-soft-color: rgb(238, 238, 238);
+  --text-color: black;
+  --app-logo: rgba(0, 0, 0, 0.703);
+  --logo-filter: invert(0);
+  --border: #444444;
+  --active: rgb(9, 40, 58);
+  --form-bg: url('./resources/images/images.jfif');
+  --form-card-bg: rgba(255, 255, 255, 0.5); /* Modified color value with transparency */
+
+}
+
+[data-theme="dark"] {
+  --bg-color: rgb(24, 24, 24);
+  --bg-soft-color: rgb(14, 14, 14);
+  --text-color: white;
+  --app-logo: rgb(171, 252, 255);
+  --logo-filter: invert(1);
+  --border: #b6b6b6;
+  --active: rgb(179, 199, 211);
+  --form-bg: url('./resources/images/pexels-jakub-novacek-924824.jpg');
+  --form-card-bg: rgba(95, 95, 95, 0.5); /* Modified color value with transparency */
+}
+
+.App{
+    background-color: var(--bg-color);
+overflow-y: scroll;
+}
+
+@media (max-width: 767px) {
+    body {
+      overflow-x: hidden !important;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    body::-webkit-scrollbar {
+      height: 12px;
+      width: 5px;
+      margin-right: 2px !important;
+    }
+    
+    body::-webkit-scrollbar-track {
+      background-color: var(--text-color);
+    }
+    
+    body::-webkit-scrollbar-thumb {
+      background-color: #2e2d2d;
+      border-radius: 6px;
+      
+    }
+  }
+  

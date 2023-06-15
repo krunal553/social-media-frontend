@@ -1,0 +1,84 @@
+  @media (max-width: 767px) {
+      .post .container .info .item>img {
+          filter: var(--logo-filter);
+          width: 20px !important;
+          height: 20px !important;
+      }
+  }
+
+
+  .post {
+      background: var(--bg-soft-color) !important;
+      border-radius: 20px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      max-width: 730px;
+      max-height: 1000px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border: 1px solid rgb(72, 72, 72);
+  }
+
+  .post .container {
+      padding: 20px;
+  }
+
+  .post .container .user {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .post .container .user .userInfo {
+      display: flex;
+      gap: 20px;
+  }
+
+  .post .container .user .userInfo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgb(174, 174, 174);
+      object-fit: cover;
+  }
+
+  .post .container .user .userInfo .details {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .post .container .user .userInfo .details .name {
+      font-weight: 500;
+  }
+
+  .post .container .user .userInfo .details .date {
+      font-size: 12px;
+  }
+
+  .post .container .content {
+      margin: 20px 0px;
+  }
+
+  .post .container .content img {
+      width: 100%;
+      max-height: 65vh;
+      object-fit: cover;
+      margin-top: 20px;
+  }
+
+  .post .container .info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  }
+
+  .post .container .info .item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+  }
+
+  .post .container .info .item>img {
+      filter: var(--logo-filter);
+  }

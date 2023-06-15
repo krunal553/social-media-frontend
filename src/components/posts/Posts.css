@@ -1,0 +1,24 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+@media only screen and (max-width:420px) {
+    .posts {
+        width: 100vw;
+    }
+    .temp {
+        height: 50px !important;
+    }
+}
+.temp {
+    height: 25px;
+}
+@media only screen and (max-width:768) {
+
+.temp {
+    height: 50px !important;
+}}

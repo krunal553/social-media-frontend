@@ -1,0 +1,81 @@
+ .login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    color: var(--text-color);
+    background-image: var(--form-bg);
+    object-fit: cover;
+}
+
+.card {
+    border: 1px solid rgb(117, 117, 117);
+    max-width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: var(--form-card-bg); /* Modified color value with transparency */
+}
+
+ .right {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* gap: 50px; */
+    justify-content: center;
+}
+
+ .right h1 {
+    color: var(--text-color);
+}
+
+ .right form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-height: min-content;
+}
+ .right form span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+ .right form span:hover {
+    color: rgb(255, 255, 255);
+}
+
+ .right input {
+    border: none;
+    border-bottom: 1.5px solid rgb(239, 239, 239);
+    padding: 13px;
+    color: var(--text-color);
+    background: transparent;
+}
+
+ .right button {
+    font-size: 14px;
+    background: #4ab397;
+    max-width: 300px !important;
+    min-width: 250px !important;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+ .right button:hover {
+    background: #247962;
+}
+
+ .reg-info {
+    display: flex;
+    gap: 5px;
+}
+
+ .register {
+    background: none;
+    text-decoration: none;
+    color: rgb(216, 216, 216);
+}

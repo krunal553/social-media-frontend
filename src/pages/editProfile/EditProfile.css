@@ -1,0 +1,86 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 500px;
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+label {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  width: 400px;
+  background: transparent;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+@media only screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="password"] {
+    max-width: 300px;
+  }
+}
+
+/* Media query for desktop screens */
+@media (min-width: 1200px) {
+  .edit-profile {
+    margin-left: 350px;
+    margin-right: 50px;
+    font-size: 18px;
+  }
+}
+
+/* Media query for laptop screens */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .edit-profile {
+    margin-left: 350px;
+    margin-right: 50px;
+    font-size: 16px;
+  }
+}
+
+/* Media query for tablet screens */
+@media (max-width: 991px) and (min-width: 768px) {
+  .edit-profile {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+  .edit-profile {
+    margin-left: 0px;
+    margin-right: 2px;
+    font-size: 12px;
+  }
+}

@@ -75,6 +75,8 @@ const Sidebar = () => {
       setActiveIcon('profile')
     } else if (currentPathname === '/create') {
       setActiveIcon('create')
+    } else if (currentPathname === '/search') {
+      setActiveIcon('search')
     }
 
     fetchProfile();
@@ -88,17 +90,17 @@ const Sidebar = () => {
     <div className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
       <div className="header-content">
         <div className="app-name">Socio</div>
-        <div className="searchbar">
+        {/* <div className="searchbar">
           <button>
             <FaSearch />
           </button>
           <input type="text" placeholder="Search" />
-        </div>
+        </div> */}
       </div>
       <div className="user-info">
         <Link to={"/profile"}>
           <div className="profile-image">
-            <img src={url+userProfile.profilePic} alt='' />
+            <img src={url + userProfile.profilePic} alt='' />
           </div>
         </Link>
         <div className="user-details">
@@ -118,13 +120,20 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/explore" className={`side-bar-icon ${activeIcon === 'explore' ? 'active' : ''}`} onClick={() => handleIconClick('search')}>
+            <Link to="/explore" className={`side-bar-icon ${activeIcon === 'explore' ? 'active' : ''}`} onClick={() => handleIconClick('explore')}>
               <FontAwesomeIcon icon={faRoute} /> Explore
             </Link>
           </li>
-            <li><Link to="/create" className={`side-bar-icon ${activeIcon === 'create' ? 'active' : ''}`} onClick={() => handleIconClick('create')}>
-                <FontAwesomeIcon icon={faPlusSquare}  /> Add
-            </Link></li>
+          <li><Link to="/create" className={`side-bar-icon ${activeIcon === 'create' ? 'active' : ''}`} onClick={() => handleIconClick('create')}>
+            <FontAwesomeIcon icon={faPlusSquare} /> Add
+          </Link>
+          </li>
+          <li>
+            <Link to="/search" className={`side-bar-icon ${activeIcon === 'search' ? 'active' : ''}`} onClick={() => handleIconClick('search')}>
+            <FaSearch />
+              Search
+            </Link>
+          </li>
           <li>
             <Link to="/activity" className={`side-bar-icon ${activeIcon === 'activity' ? 'active' : ''}`} onClick={() => handleIconClick('activity')}>
               <FaHeart />

@@ -31,7 +31,7 @@ const Posts = () => {
       {error && <Message variant='danger'>{error}</Message>}
 
         <div>
-                  {posts.map(post => (
+                  {posts?.map(post => (
             <Post post={post} key={post._id} />
           ))}
         </div>

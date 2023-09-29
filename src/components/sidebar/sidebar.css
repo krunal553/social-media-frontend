@@ -27,7 +27,7 @@
     margin-bottom: 5px;
   }
   
-  .sidebar .searchbar {
+  .searchbar {
     display: flex;
     align-items: center;
     border: 1px solid #5f5f5f;
@@ -37,7 +37,7 @@
     color: var(--text-color);
   }
   
-  .sidebar .searchbar input[type="text"] {
+  .searchbar input[type="text"] {
     border: none;
     outline: none;
     flex: 1;
@@ -45,7 +45,7 @@
 
   }
   
-  .sidebar .searchbar button {
+  .searchbar button {
     background-color: transparent;
     border: none;
     outline: none;

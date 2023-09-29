@@ -5,18 +5,19 @@ import api from '../../api';
 import { Link } from 'react-router-dom';
 import Loader from '../../components/loader/Loader'
 import Message from '../../components/message/Message'
+import { FaSearch } from 'react-icons/fa';
 
 
 const Search = () => {
 
-    const [notificationsData, setNotificationsData] = useState([]);
+    const [searchResult, setSearchResult] = useState([]);
     const userLogin = useSelector(state => state.userLogin)
     const { userInfo } = userLogin;
     const url = `http://127.0.0.1:8000`;
 
     const [loading, setLoading] = useState(false)
 
-    async function fetchNotificationsData() {
+    async function fetchSearchResult() {
         const config = {
             headers: {
                 'Content-type': 'application/json',
@@ -24,35 +25,40 @@ const Search = () => {
             }
         }
         setLoading(true)
-        const { data } = await api.get(
-            `/api/notifications/`,
+        const { data }  = await api.get(
+            `/api/users/search/?username=admin`,
             config
         )
         setLoading(false)
-        setNotificationsData(data);
+        setSearchResult(data.user_list);
     };
 
     useEffect(() => {
-        fetchNotificationsData();
+        fetchSearchResult();
     }, [])
 
     return (
         <div className='search-container'>
-
-            <h2>Search {loading && <Loader />}</h2>
-            {notificationsData.map(notification => (
+<div className="searchbar">
+          <button>
+            <FaSearch />
+          </button>
+          <input type="text" placeholder="Search" />
+        </div>
+             {loading && <Loader />}
+            {searchResult.map(notification => (
                 <div className='search' key={notification.id} >
                     <div className='user-time' >
-                        <Link to={`/profile/${notification.created_by.username}`} style={{ textDecoration: "none" }}>
-                            <img src={url + notification.created_by.profilePic} alt="User profile pic" />
+                        <Link to={`/profile/${notification.username}`} style={{ textDecoration: "none" }}>
+                            <img src={url + notification.profilePic} alt="User profile pic" />
                         </Link>
                     </div>
                     <div className='seach-message' style={{display:"flex",flexDirection:'column'}}> 
                         <span style={{ fontWeight: 'bolder' }}> 
-                            {notification.created_by.name} 
+                            {notification.username} 
                         </span>
                         <span> 
-                            {notification.created_by.name} 
+                            {notification.name} 
                         </span> 
                     </div>
                 </div>
